@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,200&display=swap">
+    <title>Dashboard</title>
+    <script>const url = "http://{{ js_ip }}"</script>
+    <style>
+        #title{
+            font-family: 'Roboto', sans-serif;
+            font-size: 2vh;
+            top: 10vh;
+            right: 10vh;
+            margin-left: 10vh;
+        }
+        #spanel {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 20%;
+            height: 100%;
+            background-color: #f2f2f2;
+            padding: 20px;
+            box-shadow: 2px 2px 10px #ccc;
+            font-family: 'Nunito', sans-serif;
+            font-size: 2vh;
+        }
+        .button {
+            display: block;
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            font-size: 1.5rem;
+            text-align: left;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            height: 50px;
+        }
+        .button:hover {
+            background-color: #ddd;
+        }
+        #pa{
+            position: relative;
+            right: 0;
+        }
+        iframe{
+            width: 130vh;
+            height: 80vh;
+            border-width: 0px;
+            margin: 0, auto;
+        }
+        #light{
+            margin-bottom: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="title">
+        <h1>Dashboard</h1>
+        <iframe id="frame" src=""></iframe>
+        <script>
+            const frame = document.getElementById('frame');
+            frame.src = `${url}/dashboard`;
+        </script>
+    </div>
+    <div id="spanel">
+        <h1 id="pa">MENU</h1>
+        <h3><button class="button" onclick="window.location.href = `${url}/led`;"><span class="material-symbols-outlined" id="light">lightbulb </span> LED-on</button></h3>
+    </div>
+</body>
+
+</html>

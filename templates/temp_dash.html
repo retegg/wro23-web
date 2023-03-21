@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Room Temperature and Humidity</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f5f5f5;
+			color: #333;
+			margin: 0;
+			padding: 0;
+		}
+		h1 {
+			text-align: center;
+			margin: 30px 0;
+		}
+		table {
+			border-collapse: collapse;
+			margin: 0 auto;
+			width: 80%;
+			max-width: 800px;
+			background-color: white;
+			box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+		}
+		th, td {
+			padding: 10px;
+			text-align: center;
+			border: 1px solid #ccc;
+		}
+		th {
+			background-color: #f2f2f2;
+		}
+		td:first-child {
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<h1>Room Temperature and Humidity</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Room</th>
+				<th>Temperature (°C)</th>
+				<th>Humidity (%)</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Room 1</td>
+				<td id="room1-temp"></td>
+				<td id="room1-hum"></td>
+			</tr>
+			<tr>
+				<td>Room 2</td>
+				<td id="room2-temp"></td>
+				<td id="room2-hum"></td>
+			</tr>
+			<tr>
+				<td>Room 3</td>
+				<td id="room3-temp"></td>
+				<td id="room3-hum"></td>
+			</tr>
+			<tr>
+				<td>Room 4</td>
+				<td id="room4-temp"></td>
+				<td id="room4-hum"></td>
+			</tr>
+		</tbody>
+	</table>
+	<script>
+		// This is a sample JavaScript code that updates the temperature and humidity data every 5 seconds.
+		setInterval(function() {
+			// Replace these values with actual temperature and humidity data.
+			var room1_temp = 25;
+			var room1_hum = 50;
+			var room2_temp = 25;
+			var room2_hum = 50;
+			var room3_temp = 25;
+			var room3_hum = 50;
+			var room4_temp = 25;
+			var room4_hum = 50;
+
+			// Update the table cells with the new values.
+			document.getElementById("room1-temp").innerHTML = room1_temp;
+			document.getElementById("room1-hum").innerHTML = room1_hum;
+			document.getElementById("room2-temp").innerHTML = room2_temp;
+			document.getElementById("room2-hum").innerHTML = room2_hum;
+			document.getElementById("room3-temp").innerHTML = room3_temp;
+			document.getElementById("room3-hum").innerHTML = room3_hum;
+			document.getElementById("room4-temp").innerHTML = room4_temp;
+			document.getElementById("room4-hum").innerHTML = room4_hum;
+		}, 5000); // Update every 5 seconds.
+	</script>
+</

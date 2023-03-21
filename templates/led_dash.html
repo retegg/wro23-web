@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>const url = "http://{{ js_ip }}" </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #7b9298;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 50px;
+            margin-bottom: 155px;
+            cursor: pointer;
+        }
+        button.clicked {
+            background-color: #12b9d2;
+        }
+
+        /* Media Queries */
+        @media only screen and (max-width: 768px) {
+            .row {
+                flex-direction: column;
+            }
+            button {
+                margin: 10px;
+                margin-bottom: 30px;
+            }
+        }
+        @media only screen and (min-width: 769px) {
+            button {
+                margin-right: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <button id="h1">habitacion 1</button>
+        <button id="h2">habitacion 2</button>
+    </div>
+    <div class="row">
+        <button id="h3">habitacion 3</button>
+        <button id="h4">habitacion 4</button>
+    </div>
+    <script>
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                button.classList.toggle('clicked');
+                const bid = button.id;
+                fetch(`/${bid}`)
+            });
+        });
+    </script>
+</body>
+</html>
