@@ -21,7 +21,7 @@ ench4 = 0
 def set_dashboard():
     global file_dash
     global ip 
-    file_dash = "temp_dash.html"
+    file_dash = "led_dash.html"
     return redirect(url_for('main'))
 
 
@@ -51,7 +51,13 @@ def h1():
     line = ser.readline().decode('utf-8').rstrip()
     print(line)
     return redirect(url_for("dashboard"))
-
+ 
+@app.route('/temp')
+def set_dashboard_temp():
+    global file_dash
+    global ip 
+    file_dash = "temp_dash.html"
+    return redirect(url_for('main'))
 
 if __name__ == '__main__':
     app.run(f'{ip}', 80)
