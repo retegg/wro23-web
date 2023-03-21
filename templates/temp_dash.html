@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Room Temperature and Humidity</title>
 	<style>
 		body {
 			font-family: Arial, sans-serif;
@@ -14,64 +13,60 @@
 			text-align: center;
 			margin: 30px 0;
 		}
-		table {
-			border-collapse: collapse;
-			margin: 0 auto;
-			width: 80%;
-			max-width: 800px;
+		.room {
+			display: block;
+			margin: 20px auto;
+			max-width: 500px;
 			background-color: white;
+			padding: 20px;
 			box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
 		}
-		th, td {
-			padding: 10px;
-			text-align: center;
-			border: 1px solid #ccc;
-		}
-		th {
-			background-color: #f2f2f2;
-		}
-		td:first-child {
+		.room-name {
 			font-weight: bold;
+			font-size: 1.2em;
+			margin-bottom: 10px;
+		}
+		.room-value {
+			font-size: 1.5em;
+			margin-bottom: 5px;
+		}
+		.room-label {
+			font-size: 0.8em;
+			color: #666;
 		}
 	</style>
 </head>
 <body>
-	<h1>Room Temperature and Humidity</h1>
-	<table>
-		<thead>
-			<tr>
-				<th>Room</th>
-				<th>Temperature (°C)</th>
-				<th>Humidity (%)</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Room 1</td>
-				<td id="room1-temp"></td>
-				<td id="room1-hum"></td>
-			</tr>
-			<tr>
-				<td>Room 2</td>
-				<td id="room2-temp"></td>
-				<td id="room2-hum"></td>
-			</tr>
-			<tr>
-				<td>Room 3</td>
-				<td id="room3-temp"></td>
-				<td id="room3-hum"></td>
-			</tr>
-			<tr>
-				<td>Room 4</td>
-				<td id="room4-temp"></td>
-				<td id="room4-hum"></td>
-			</tr>
-		</tbody>
-	</table>
+	<div class="room">
+		<div class="room-name">habitacion 1</div>
+		<div class="room-value"><span id="room1-temp"></span> °C</div>
+		<div class="room-label">Temperature</div>
+		<div class="room-value"><span id="room1-hum"></span> %</div>
+		<div class="room-label">Humidity</div>
+	</div>
+	<div class="room">
+		<div class="room-name">habitacion 2</div>
+		<div class="room-value"><span id="room2-temp"></span> °C</div>
+		<div class="room-label">Temperature</div>
+		<div class="room-value"><span id="room2-hum"></span> %</div>
+		<div class="room-label">Humidity</div>
+	</div>
+	<div class="room">
+		<div class="room-name">habitacion 3</div>
+		<div class="room-value"><span id="room3-temp"></span> °C</div>
+		<div class="room-label">Temperature</div>
+		<div class="room-value"><span id="room3-hum"></span> %</div>
+		<div class="room-label">Humidity</div>
+	</div>
+	<div class="room">
+		<div class="room-name">habitacion 4</div>
+		<div class="room-value"><span id="room4-temp"></span> °C</div>
+		<div class="room-label">Temperature</div>
+		<div class="room-value"><span id="room4-hum"></span> %</div>
+		<div class="room-label">Humidity</div>
+	</div>
 	<script>
-		// This is a sample JavaScript code that updates the temperature and humidity data every 5 seconds.
 		setInterval(function() {
-			// Replace these values with actual temperature and humidity data.
 			var room1_temp = 25;
 			var room1_hum = 50;
 			var room2_temp = 25;
@@ -80,8 +75,6 @@
 			var room3_hum = 50;
 			var room4_temp = 25;
 			var room4_hum = 50;
-
-			// Update the table cells with the new values.
 			document.getElementById("room1-temp").innerHTML = room1_temp;
 			document.getElementById("room1-hum").innerHTML = room1_hum;
 			document.getElementById("room2-temp").innerHTML = room2_temp;
@@ -90,6 +83,8 @@
 			document.getElementById("room3-hum").innerHTML = room3_hum;
 			document.getElementById("room4-temp").innerHTML = room4_temp;
 			document.getElementById("room4-hum").innerHTML = room4_hum;
-		}, 5000); // Update every 5 seconds.
+		}, 1000);
 	</script>
-</
+</body>
+</html>
+

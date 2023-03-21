@@ -21,7 +21,7 @@ ench4 = 0
 def set_dashboard():
     global file_dash
     global ip 
-    file_dash = "led_dash.html"
+    file_dash = "temp_dash.html"
     return redirect(url_for('main'))
 
 
